@@ -333,6 +333,229 @@
         2   4   90
     </pre>
     <p>Solution: <code>6-bonus.sql</code></p>
+    <h2>7. Average Score</h2>
+<p>Write a SQL script that creates a stored procedure ComputeAverageScoreForUser that computes and stores the average score for a student. Note: An average score can be a decimal</p>
+
+<h3>Requirements:</h3>
+<p>Procedure ComputeAverageScoreForUser is taking 1 input:
+    <strong>user_id</strong>, a users.id value (you can assume user_id is linked to an existing users)
+</p>
+
+<pre>
+<code>
+-- Initial
+DROP TABLE IF EXISTS corrections;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS projects;
+
+CREATE TABLE IF NOT EXISTS users (
+    id int not null AUTO_INCREMENT,
+    name varchar(255) not null,
+    average_score float default 0,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS projects (
+    id int not null AUTO_INCREMENT,
+    name varchar(255) not null,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS corrections (
+    user_id int not null,
+    project_id int not null,
+    score int default 0,
+    KEY `user_id` (`user_id`),
+    KEY `project_id` (`project_id`),
+    CONSTRAINT fk_user_id FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+    CONSTRAINT fk_project_id FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
+);
+
+INSERT INTO users (name) VALUES ("Bob");
+SET @user_bob = LAST_INSERT_ID();
+
+INSERT INTO users (name) VALUES ("Jeanne");
+SET @user_jeanne = LAST_INSERT_ID();
+
+INSERT INTO projects (name) VALUES ("C is fun");
+SET @project_c = LAST_INSERT_ID();
+
+INSERT INTO projects (name) VALUES ("Python is cool");
+SET @project_py = LAST_INSERT_ID();
+
+
+INSERT INTO corrections (user_id, project_id, score) VALUES (@user_bob, @project_c, 80);
+INSERT INTO corrections (user_id, project_id, score) VALUES (@user_bob, @project_py, 96);
+
+INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @project_c, 91);
+INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @project_py, 73);
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 7-average_score.sql</p>
+
+<h2>8. Optimize simple search</h2>
+<p>Write a SQL script that creates an index idx_name_first on the table names and the first letter of name.</p>
+
+<h3>Requirements:</h3>
+<p>Import this table dump: names.sql.zip
+    Only the first letter of name must be indexed
+    Context: Index is not the solution for any performance issue, but well used, it’s really powerful!
+</p>
+
+<pre>
+<code>
+-- Index My Names
+CREATE INDEX idx_name_first ON names (SUBSTRING(name, 1, 1));
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 8-index_my_names.sql</p>
+
+<h2>9. Optimize search and score</h2>
+<p>Write a SQL script that creates an index idx_name_first_score on the table names and the first letter of name and the score.</p>
+
+<h3>Requirements:</h3>
+<p>Import this table dump: names.sql.zip
+    Only the first letter of name AND score must be indexed
+</p>
+
+<pre>
+<code>
+-- Index Name and Score
+CREATE INDEX idx_name_first_score ON names (SUBSTRING(name, 1, 1), score);
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 9-index_name_score.sql</p>
+
+<h2>10. Safe divide</h2>
+<p>Write a SQL script that creates a function SafeDiv that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0.</p>
+
+<h3>Requirements:</h3>
+<p>You must create a function
+    The function SafeDiv takes 2 arguments:
+    <strong>a</strong>, INT
+    <strong>b</strong>, INT
+    And returns a / b or 0 if b == 0
+</p>
+
+<pre>
+<code>
+-- Safe Divide Function
+DELIMITER //
+CREATE FUNCTION SafeDiv(a INT, b INT)
+RETURNS FLOAT
+BEGIN
+    IF b = 0 THEN
+        RETURN 0;
+    ELSE
+        RETURN a / b;
+    END IF;
+END //
+DELIMITER ;
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 10-div.sql</p>
+
+<h2>11. No table for a meeting</h2>
+<p>Write a SQL script that creates a view need_meeting that lists all students that have a score under 80 (strict) and no last_meeting or more than 1 month.</p>
+
+<h3>Requirements:</h3>
+<p>The view need_meeting should return all students name when:
+    They score are under (strict) to 80
+    AND no last_meeting date OR more than a month
+</p>
+
+<pre>
+<code>
+-- Need Meeting View
+CREATE VIEW need_meeting AS
+SELECT name
+FROM students
+WHERE score < 80 AND (last_meeting IS NULL OR last_meeting < DATE_SUB(NOW(), INTERVAL 1 MONTH));
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 11-need_meeting.sql</p>
+<h2>12. Average Weighted Score</h2>
+<p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUser that computes and stores the average weighted score for a student.</p>
+
+<h3>Requirements:</h3>
+<p>Procedure ComputeAverageScoreForUser is taking 1 input:
+    <strong>user_id</strong>, a users.id value (you can assume user_id is linked to an existing users)
+</p>
+<p><strong>Tips:</strong> Calculate-Weighted-Average</p>
+
+<pre>
+<code>
+-- Average Weighted Score
+DELIMITER //
+CREATE PROCEDURE ComputeAverageWeightedScoreForUser(user_id INT)
+BEGIN
+    DECLARE total_score FLOAT;
+    DECLARE total_weight INT;
+    
+    SELECT SUM(c.score * p.weight), SUM(p.weight)
+    INTO total_score, total_weight
+    FROM corrections c
+    JOIN projects p ON c.project_id = p.id
+    WHERE c.user_id = user_id;
+    
+    IF total_weight > 0 THEN
+        UPDATE users
+        SET average_score = total_score / total_weight
+        WHERE id = user_id;
+    ELSE
+        UPDATE users
+        SET average_score = 0
+        WHERE id = user_id;
+    END IF;
+END //
+DELIMITER ;
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 100-average_weighted_score.sql</p>
+
+<h2>13. Average Weighted Score for All</h2>
+<p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUsers that computes and stores the average weighted score for all students.</p>
+
+<h3>Requirements:</h3>
+<p>Procedure ComputeAverageWeightedScoreForUsers is not taking any input.</p>
+<p><strong>Tips:</strong> Calculate-Weighted-Average</p>
+
+<pre>
+<code>
+-- Average Weighted Score for All
+DELIMITER //
+CREATE PROCEDURE ComputeAverageWeightedScoreForUsers()
+BEGIN
+    DECLARE user_id_var INT;
+    
+    DECLARE user_cursor CURSOR FOR
+    SELECT id FROM users;
+    
+    OPEN user_cursor;
+    
+    user_loop: LOOP
+        FETCH user_cursor INTO user_id_var;
+        IF user_id_var IS NULL THEN
+            LEAVE user_loop;
+        END IF;
+        
+        CALL ComputeAverageWeightedScoreForUser(user_id_var);
+    END LOOP;
+    
+    CLOSE user_cursor;
+END //
+DELIMITER ;
+</code>
+</pre>
+
+<p><strong>Solution:</strong> 101-average_weighted_score.sql</p>
+    
 
 
 
