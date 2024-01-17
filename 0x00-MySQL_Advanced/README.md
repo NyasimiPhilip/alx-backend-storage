@@ -31,11 +31,9 @@
         2   sylvie@dylan.com    Sylvie
     </pre>
     <p>Solution:</p>
-<code>
-    <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql">
-        0-uniq_users.sql
+    <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql"><code>
+        0-uniq_users.sql</code>
     </a>
-</code>
      <h2>Task 1: In and not out</h2>
     <p>Write a SQL script that creates a table users following these requirements:</p>
     <ul>
