@@ -30,10 +30,8 @@
         1   bob@dylan.com   Bob
         2   sylvie@dylan.com    Sylvie
     </pre>
-    <p>Solution:</p>
-    <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql"><code>
-        0-uniq_users.sql</code>
-    </a>
+    <p>Solution:</p><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql"><code>
+        0-uniq_users.sql</code></a>
      <h2>Task 1: In and not out</h2>
     <p>Write a SQL script that creates a table users following these requirements:</p>
     <ul>
