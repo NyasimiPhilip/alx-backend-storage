@@ -478,7 +478,7 @@ WHERE score < 80 AND (last_meeting IS NULL OR last_meeting < DATE_SUB(NOW(), INT
 </code>
 </pre>
 
-<p><strong>Solution:</strong><code>11-need_meeting.sql</code></p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/11-need_meeting.sql"><code>11-need_meeting.sql</code></a></p>
 <h2>12. Average Weighted Score</h2>
 <p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUser that computes and stores the average weighted score for a student.</p>
 
@@ -517,8 +517,7 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 
-<code>100-average_weighted_score.sql</code></p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/100-average_weighted_score.sql"><code>100-average_weighted_score.sql</code></a></p>
 
 <h2>13. Average Weighted Score for All</h2>
 <p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUsers that computes and stores the average weighted score for all students.</p>
@@ -555,7 +554,7 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong> <code>101-average_weighted_score.sql</code></p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/101-average_weighted_score.sql"><code>101-average_weighted_score.sql</code></a></p>
     
 
 
