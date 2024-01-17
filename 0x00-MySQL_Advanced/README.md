@@ -427,7 +427,9 @@ CREATE INDEX idx_name_first_score ON names (SUBSTRING(name, 1, 1), score);
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 9-index_name_score.sql</p>
+<p><strong>Solution:</strong>
+<code>9-index_name_score.sql
+</code></p>
 
 <h2>10. Safe divide</h2>
 <p>Write a SQL script that creates a function SafeDiv that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0.</p>
