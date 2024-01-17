@@ -457,7 +457,8 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 10-div.sql</p>
+<p><strong>Solution:</strong>
+<code>10-div.sql</code></p>
 
 <h2>11. No table for a meeting</h2>
 <p>Write a SQL script that creates a view need_meeting that lists all students that have a score under 80 (strict) and no last_meeting or more than 1 month.</p>
@@ -478,7 +479,7 @@ WHERE score < 80 AND (last_meeting IS NULL OR last_meeting < DATE_SUB(NOW(), INT
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 11-need_meeting.sql</p>
+<p><strong>Solution:</strong><code>11-need_meeting.sql</code></p>
 <h2>12. Average Weighted Score</h2>
 <p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUser that computes and stores the average weighted score for a student.</p>
 
@@ -517,7 +518,8 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 100-average_weighted_score.sql</p>
+<p><strong>Solution:</strong> 
+<code>100-average_weighted_score.sql</code></p>
 
 <h2>13. Average Weighted Score for All</h2>
 <p>Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUsers that computes and stores the average weighted score for all students.</p>
@@ -554,7 +556,7 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 101-average_weighted_score.sql</p>
+<p><strong>Solution:</strong> <code>101-average_weighted_score.sql</code></p>
     
 
 
