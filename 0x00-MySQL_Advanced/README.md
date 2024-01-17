@@ -31,8 +31,7 @@
         2   sylvie@dylan.com    Sylvie
     </pre>
     <p>Solution:
-    <code>
-    <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql">0-uniq_users.sql</a>
+    <code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/0-uniq_users.sql">0-uniq_users.sql</a>
     </code></p>
      <h2>Task 1: In and not out</h2>
     <p>Write a SQL script that creates a table users following these requirements:</p>
@@ -71,8 +70,7 @@
         3   john@dylan.com  John    US
     </pre>
     <p>Solution:
-    <code>
-    <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/1-country_users">1-country_users.sql</a></code></p>
+    <code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/1-country_users">1-country_users.sql</a></code></p>
     <h2>Task 2: Best band ever</h2>
     <p>Write a SQL script that ranks country origins of bands, ordered by the number of (non-unique) fans</p>
     <ul>
@@ -99,8 +97,7 @@
         The Netherlands 8819
         Italy   7178
     </pre>
-    <p>Solution:<code>
-     <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql">2-fans.sql
+    <p>Solution:<code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql">2-fans.sql
      </a></code></p>
     <h2>Task 3: Old school band</h2>
     <p>Write a SQL script that lists all bands with Glam rock as their main style, ranked by their longevity</p>
@@ -126,8 +123,7 @@
         Nasty Idols 0
         Hanoi Rocks 0
     </pre>
-    <p>Solution:<code>
-     <a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql">
+    <p>Solution:<code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql">
     3-glam_rock.sql</a>
     </code></p>
     <h2>4. Buy buy buy</h2>
