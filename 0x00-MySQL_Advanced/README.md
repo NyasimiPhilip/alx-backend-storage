@@ -175,7 +175,7 @@
         apple   3
         pear    2
     </pre>
-    <p>Solution: <code>4-store.sql</code></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/4-store.sql"><code>4-store.sql</code></a></p>
     <h2>5. Email validation to sent</h2>
     <p>Write a SQL script that creates a trigger that resets the attribute valid_email only when the email has been changed.</p>
     <p>Context: Nothing related to MySQL, but perfect for user email validation - distribute the logic to the database itself!</p>
@@ -232,7 +232,7 @@
         2   sylvie+new@dylan.com    Sylvie  0
         3   jeanne@dylan.com    Jannis  1
     </pre>
-    <p>Solution: <code>5-valid_email.sql</code></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/5-valid_email.sql"><code>5-valid_email.sql</code></a></p>
     <h2>6. Add bonus</h2>
     <p>Write a SQL script that creates a stored procedure AddBonus that adds a new correction for a student.</p>
     <p>Requirements:</p>
@@ -333,7 +333,7 @@
         1   3   10
         2   4   90
     </pre>
-    <p>Solution: <code>6-bonus.sql</code></p>
+   <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/6-bonus.sql"><code>6-bonus.sql</code></a></p>
     <h2>7. Average Score</h2>
 <p>Write a SQL script that creates a stored procedure ComputeAverageScoreForUser that computes and stores the average score for a student. Note: An average score can be a decimal</p>
 
@@ -393,7 +393,7 @@ INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @proj
 </code>
 </pre>
 
-<p><strong>Solution:</strong> 7-average_score.sql</p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/7-average_score.sql"><code> 7-average_score.sql</code></a></p>
 
 <h2>8. Optimize simple search</h2>
 <p>Write a SQL script that creates an index idx_name_first on the table names and the first letter of name.</p>
@@ -410,8 +410,7 @@ INSERT INTO corrections (user_id, project_id, score) VALUES (@user_jeanne, @proj
 CREATE INDEX idx_name_first ON names (SUBSTRING(name, 1, 1));
 </code>
 </pre>
-
-<p><strong>Solution:</strong> 8-index_my_names.sql</p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/8-index_my_names.sql"><code>8-index_my_names.sql</code></a></p>
 
 <h2>9. Optimize search and score</h2>
 <p>Write a SQL script that creates an index idx_name_first_score on the table names and the first letter of name and the score.</p>
@@ -428,9 +427,7 @@ CREATE INDEX idx_name_first_score ON names (SUBSTRING(name, 1, 1), score);
 </code>
 </pre>
 
-<p><strong>Solution:</strong>
-<code>9-index_name_score.sql
-</code></p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/9-index_name_score.sql"><code>9-index_name_score.sql</code></a></p>
 
 <h2>10. Safe divide</h2>
 <p>Write a SQL script that creates a function SafeDiv that divides (and returns) the first by the second number or returns 0 if the second number is equal to 0.</p>
@@ -460,8 +457,7 @@ DELIMITER ;
 </code>
 </pre>
 
-<p><strong>Solution:</strong>
-<code>10-div.sql</code></p>
+<p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/10-div.sql"><code>10-div.sql</code></a></p>
 
 <h2>11. No table for a meeting</h2>
 <p>Write a SQL script that creates a view need_meeting that lists all students that have a score under 80 (strict) and no last_meeting or more than 1 month.</p>
