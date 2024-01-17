@@ -67,8 +67,7 @@
         2   sylvie@dylan.com    Sylvie  CO
         3   john@dylan.com  John    US
     </pre>
-    <p>Solution:
-    <code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/1-country_users">1-country_users.sql</a></code></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/1-country_users"><code>1-country_users.sql</code></a></p>
     <h2>Task 2: Best band ever</h2>
     <p>Write a SQL script that ranks country origins of bands, ordered by the number of (non-unique) fans</p>
     <ul>
@@ -95,8 +94,8 @@
         The Netherlands 8819
         Italy   7178
     </pre>
-    <p>Solution:<code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql">2-fans.sql
-     </a></code></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql"><code>2-fans.sql
+     </code></a></p>
     <h2>Task 3: Old school band</h2>
     <p>Write a SQL script that lists all bands with Glam rock as their main style, ranked by their longevity</p>
     <ul>
@@ -121,9 +120,9 @@
         Nasty Idols 0
         Hanoi Rocks 0
     </pre>
-    <p>Solution:<code><a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql">
-    3-glam_rock.sql</a>
-    </code></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql"><code>
+    3-glam_rock.sql</code></a>
+   </p>
     <h2>4. Buy buy buy</h2>
     <p>Write a SQL script that creates a trigger that decreases the quantity of an item after adding a new order.</p>
     <p>Quantity in the table items can be negative.</p>
