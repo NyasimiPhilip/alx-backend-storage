@@ -94,8 +94,7 @@
         The Netherlands 8819
         Italy   7178
     </pre>
-    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql"><code>2-fans.sql
-     </code></a></p>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/2-fans.sql"><code>2-fans.sql</code></a></p>
     <h2>Task 3: Old school band</h2>
     <p>Write a SQL script that lists all bands with Glam rock as their main style, ranked by their longevity</p>
     <ul>
@@ -120,8 +119,7 @@
         Nasty Idols 0
         Hanoi Rocks 0
     </pre>
-    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql"><code>
-    3-glam_rock.sql</code></a>
+    <p>Solution:<a href="https://github.com/NyasimiPhilip/alx-backend-storage/blob/master/0x00-MySQL_Advanced/3-glam_rock.sql"><code>3-glam_rock.sql</code></a>
    </p>
     <h2>4. Buy buy buy</h2>
     <p>Write a SQL script that creates a trigger that decreases the quantity of an item after adding a new order.</p>
