@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>0x00. MySQL advanced</td>
+                <td><a href="https://github.com/NyasimiPhilip/alx-backend-storage/tree/master/0x00-MySQL_Advanced">0x00. MySQL advanced</a></td>
                 <td>MySQL advanced: Back-end SQL MySQL</td>
             </tr>
             <tr>
