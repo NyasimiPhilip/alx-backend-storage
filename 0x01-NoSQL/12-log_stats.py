@@ -4,8 +4,9 @@ Script that provides some stats about Nginx logs stored in MongoDB
 """
 
 from pymongo import MongoClient
-
-def log_stats():
+    
+if __name__ == "__main__":
+    
     client = MongoClient()
     db = client.logs
     collection = db.nginx
@@ -26,6 +27,3 @@ def log_stats():
     for method in methods:
         print(f"\tmethod {method}: {method_counts[method]}")
     print(f"{status_check_count} status check")
-
-if __name__ == "__main__":
-    log_stats()
