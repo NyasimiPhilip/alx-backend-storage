@@ -13,13 +13,6 @@ local        0.000GB
 logs         0.005GB
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 0-list_databases</li>
-</ul>
-
 <h2>Task 1: Create a database</h2>
 <p>Write a script that creates or uses the database my_db:</p>
 <pre>
@@ -30,13 +23,6 @@ MongoDB server version: 3.6.3
 switched to db my_db
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 1-use_or_create_database</li>
-</ul>
-
 <h2>Task 2: Insert document</h2>
 <p>Write a script that inserts a document in the collection school:</p>
 <pre>
@@ -47,15 +33,6 @@ MongoDB server version: 3.6.3
 WriteResult({ "nInserted" : 1 })
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 2-insert</li>
-</ul>
-
-<!-- Repeat similar sections for the remaining tasks -->
-
 <h2>Task 3: All documents</h2>
 <p>Write a script that lists all documents in the collection school:</p>
 <pre>
@@ -66,13 +43,6 @@ MongoDB server version: 3.6.3
 { "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 3-all</li>
-</ul>
-
 <h2>Task 4: All matches</h2>
 <p>Write a script that lists all documents with name="Holberton school" in the collection school:</p>
 <pre>
@@ -83,13 +53,6 @@ MongoDB server version: 3.6.3
 { "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 4-match</li>
-</ul>
-
 <h2>Task 5: Count</h2>
 <p>Write a script that displays the number of documents in the collection school:</p>
 <pre>
@@ -100,13 +63,6 @@ MongoDB server version: 3.6.3
 1
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 5-count</li>
-</ul>
-
 <h2>Task 6: Update</h2>
 <p>Write a script that adds a new attribute to a document in the collection school:</p>
 <pre>
@@ -117,13 +73,6 @@ MongoDB server version: 3.6.3
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 6-update</li>
-</ul>
-
 <h2>Task 7: Delete by match</h2>
 <p>Write a script that deletes all documents with name="Holberton school" in the collection school:</p>
 <pre>
@@ -134,13 +83,6 @@ MongoDB server version: 3.6.3
 { "acknowledged" : true, "deletedCount" : 1 }
 bye
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 7-delete</li>
-</ul>
-
 <h2>Task 8: List all documents in Python</h2>
 <p>Write a Python function that lists all documents in a collection:</p>
 <pre>
@@ -157,13 +99,6 @@ if __name__ == "__main__":
     for school in schools:
         print("[{}] {}".format(school.get('_id'), school.get('name')))
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 8-all.py</li>
-</ul>
-
 <h2>Task 9: Insert a document in Python</h2>
 <p>Write a Python function that inserts a new document in a collection based on kwargs:</p>
 <pre>
@@ -184,12 +119,6 @@ if __name__ == "__main__":
     for school in schools:
         print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('address', "")))
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 9-insert_school.py</li>
-</ul>
 <h2>Task 10: Change school topics</h2>
 <p>Write a Python function that changes all topics of a school document based on the name:</p>
 <pre>
@@ -215,13 +144,6 @@ if __name__ == "__main__":
     for school in schools:
         print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 10-update_topics.py</li>
-</ul>
-
 <h2>Task 11: Where can I learn Python?</h2>
 <p>Write a Python function that returns the list of school having a specific topic:</p>
 <pre>
@@ -251,13 +173,6 @@ if __name__ == "__main__":
     for school in schools:
         print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 11-schools_by_topic.py</li>
-</ul>
-
 <h2>Task 12: Log stats</h2>
 <p>Write a Python script that provides some stats about Nginx logs stored in MongoDB:</p>
 <pre>
@@ -299,12 +214,6 @@ Methods:
 47415 status check
 guillaume@ubuntu:~/0x01$ 
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 12-log_stats.py</li>
-</ul>
 <h2>Task 13: Regex filter</h2>
 <p>Write a script that lists all documents with name starting by Holberton in the collection school:</p>
 <pre>
@@ -318,13 +227,6 @@ MongoDB server version: 3.6.3
 bye
 guillaume@ubuntu:~/0x01$
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 100-find</li>
-</ul>
-
 <h2>Task 14: Top students</h2>
 <p>Write a Python function that returns all students sorted by average score:</p>
 <pre>
@@ -358,13 +260,6 @@ if __name__ == "__main__":
     for student in top_students:
         print("[{}] {} => {}".format(student.get('_id'), student.get('name'), student.get('averageScore')))
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 101-students.py</li>
-</ul>
-
 <h2>Task 15: Log stats - new version</h2>
 <p>Improve 12-log_stats.py by adding the top 10 of the most present IPs in the collection nginx of the database logs:</p>
 <pre>
@@ -390,9 +285,3 @@ IPs:
     216.244.66.228: 150
 guillaume@ubuntu:~/0x01$
 </pre>
-<p><strong>Repo:</strong></p>
-<ul>
-    <li>GitHub repository: alx-backend-storage</li>
-    <li>Directory: 0x01-NoSQL</li>
-    <li>File: 102-log_stats.py</li>
-</ul>
