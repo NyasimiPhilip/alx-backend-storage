@@ -14,7 +14,7 @@
                 <td>MySQL advanced: Back-end SQL MySQL</td>
             </tr>
             <tr>
-                <td>0x01. NoSQL</td>
+                <td><a href ="https://github.com/NyasimiPhilip/alx-backend-storage/tree/master/0x01-NoSQL">0x01. NoSQL</a></td>
                 <td>NoSQL: Back-end NoSQL MongoDB</td>
             </tr>
             <tr>
