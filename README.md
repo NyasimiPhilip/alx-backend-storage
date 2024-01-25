@@ -18,7 +18,7 @@
                 <td>NoSQL: Back-end NoSQL MongoDB</td>
             </tr>
             <tr>
-                <td>0x02. Redis basic</td>
+                <td><a href="https://github.com/NyasimiPhilip/alx-backend-storage/tree/master/0x02-redis_basic">0x02. Redis basic</a></td>
                 <td>Redis basic: Back-end Redis</td>
             </tr>
         </tbody>
